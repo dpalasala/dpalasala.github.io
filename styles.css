@@ -406,8 +406,160 @@ h3 {
   pointer-events: none;
 }
 
+.agent-dashboard::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(transparent 0 48%, rgba(49, 199, 183, 0.08) 50%, transparent 52%),
+    repeating-linear-gradient(90deg, transparent 0 18px, rgba(126, 171, 255, 0.035) 19px 20px);
+  background-size: 100% 160px, auto;
+  animation: dashboardScan 5.4s linear infinite;
+  pointer-events: none;
+}
+
 .agent-dashboard > * {
   position: relative;
+  z-index: 2;
+}
+
+.mini-zoro-scene {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  z-index: 1;
+  width: 128px;
+  height: 128px;
+  pointer-events: none;
+}
+
+.mini-zoro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  height: 82px;
+  transform: translate(-50%, -50%);
+  animation: miniZoroFloat 3.2s ease-in-out infinite;
+}
+
+.mini-face {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  width: 29px;
+  height: 31px;
+  border-radius: 46% 46% 42% 42%;
+  background: #f0c39a;
+  box-shadow:
+    inset -5px -4px 0 rgba(81, 44, 36, 0.16),
+    0 0 20px rgba(49, 199, 183, 0.16);
+}
+
+.mini-bandana {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  top: 2px;
+  width: 38px;
+  height: 18px;
+  border-radius: 14px 14px 5px 5px;
+  background:
+    linear-gradient(135deg, #8dffab 0 20%, transparent 21%),
+    linear-gradient(70deg, #19c760, #057c48);
+  box-shadow: 0 0 16px rgba(49, 199, 183, 0.36);
+}
+
+.mini-bandana::after {
+  position: absolute;
+  right: -9px;
+  top: 9px;
+  width: 17px;
+  height: 7px;
+  content: "";
+  border-radius: 0 8px 8px 0;
+  background: #12a858;
+  transform-origin: left center;
+  animation: bandanaTail 1.8s ease-in-out infinite;
+}
+
+.mini-eye {
+  position: absolute;
+  top: 15px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #07111d;
+  animation: zoroBlink 4.2s infinite;
+}
+
+.mini-eye.left {
+  left: 8px;
+}
+
+.mini-eye.right {
+  right: 8px;
+}
+
+.mini-coat {
+  position: absolute;
+  left: 8px;
+  top: 40px;
+  width: 41px;
+  height: 42px;
+  border-radius: 12px 12px 8px 8px;
+  background:
+    linear-gradient(90deg, transparent 47%, rgba(238, 245, 255, 0.4) 48% 52%, transparent 53%),
+    linear-gradient(145deg, #123528, #071b19);
+  border: 1px solid rgba(49, 199, 183, 0.28);
+}
+
+.mini-sword {
+  position: absolute;
+  height: 4px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #eef5ff, #7eabff);
+  box-shadow: 0 0 18px rgba(126, 171, 255, 0.48);
+}
+
+.mini-sword::after {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 9px;
+  height: 12px;
+  content: "";
+  border-radius: 3px;
+  background: var(--amber);
+}
+
+.mini-sword.main {
+  left: -4px;
+  top: 50px;
+  width: 68px;
+  transform: rotate(-34deg);
+  animation: swordSweep 2.8s ease-in-out infinite;
+}
+
+.mini-sword.back {
+  left: -2px;
+  top: 57px;
+  width: 62px;
+  opacity: 0.64;
+  transform: rotate(34deg);
+}
+
+.scan-ring {
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(49, 199, 183, 0.28);
+  border-radius: 50%;
+  animation: scanRing 2.8s ease-out infinite;
+}
+
+.ring-two {
+  animation-delay: 1.4s;
+}
 }
 
 .dashboard-header {
@@ -416,6 +568,7 @@ h3 {
   justify-content: space-between;
   gap: 18px;
   margin-bottom: 18px;
+  padding-right: 126px;
 }
 
 .dashboard-header strong {
@@ -509,6 +662,58 @@ h3 {
   border-color: var(--teal);
   background: var(--teal);
   box-shadow: 0 0 18px rgba(49, 199, 183, 0.58);
+}
+
+@keyframes dashboardScan {
+  0% {
+    background-position: 0 -160px, 0 0;
+  }
+  100% {
+    background-position: 0 160px, 40px 0;
+  }
+}
+
+@keyframes miniZoroFloat {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-7px) rotate(2deg);
+  }
+}
+
+@keyframes bandanaTail {
+  0%,
+  100% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(-14deg);
+  }
+}
+
+@keyframes swordSweep {
+  0%,
+  100% {
+    filter: brightness(1);
+    transform: rotate(-34deg) translateX(0);
+  }
+  50% {
+    filter: brightness(1.45);
+    transform: rotate(-31deg) translateX(4px);
+  }
+}
+
+@keyframes scanRing {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.72);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.32);
+  }
 }
 
 .mini-console {
