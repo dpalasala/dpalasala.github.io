@@ -29,6 +29,7 @@
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#zoro">Agent Zoro</a>
+        <a href="#stock-piler">Stock Piler</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -50,6 +51,7 @@
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#zoro">View Agent Zoro</a>
+            <a class="button secondary" href="#stock-piler">View Stock Piler</a>
             <a class="button secondary" href="https://www.linkedin.com/in/dinesh-krishna-palasala-73620a308/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="button secondary" href="https://github.com/dpalasala/zoro-agent" target="_blank" rel="noreferrer">GitHub</a>
           </div>
@@ -302,6 +304,70 @@
           <article>
             <h3>Automation</h3>
             <p>Scheduled application windows, resume routing, reports, and Gmail tracking labels.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="stock-piler" class="section stock-piler-section">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Project</p>
+          <h2>Stock Piler</h2>
+          <p>
+            Stock and ETF tracking dashboard with market data, alerting, and conservative investing guardrails.
+          </p>
+        </div>
+
+        <div class="project-layout">
+          <article class="project-panel">
+            <h3>What it does</h3>
+            <p>
+              Stock Piler tracks a global stock and ETF watchlist, detects ticker symbols from company
+              names, refreshes market prices with Yahoo Finance and yfinance, monitors daily lows,
+              and prepares WhatsApp-ready buy alerts while keeping all Robinhood trades manual.
+            </p>
+            <div class="project-actions">
+              <a class="button primary" href="stock-piler.html">Open Dashboard</a>
+              <a class="button secondary" href="https://github.com/dpalasala/dpalasala.github.io" target="_blank" rel="noreferrer">Open GitHub</a>
+              <button class="button secondary" type="button" data-copy="Built Stock Piler, a Python and JavaScript stock tracking dashboard with Yahoo Finance/yfinance market data, ticker detection, persistent watchlists, daily-low buy alerts, WhatsApp-ready messages, and Robinhood safety guardrails.">Copy Resume Bullet</button>
+            </div>
+          </article>
+
+          <div class="workflow" aria-label="Stock Piler workflow">
+            <div class="workflow-step">
+              <span>01</span>
+              <strong>Track</strong>
+              <p>Manage global stocks, ETFs, ADRs, and user-added symbols.</p>
+            </div>
+            <div class="workflow-step">
+              <span>02</span>
+              <strong>Resolve</strong>
+              <p>Find ticker symbols from company names like Netflix, Tata, or Foxconn.</p>
+            </div>
+            <div class="workflow-step">
+              <span>03</span>
+              <strong>Alert</strong>
+              <p>Detect daily-low trigger levels and prepare WhatsApp buy alerts.</p>
+            </div>
+            <div class="workflow-step">
+              <span>04</span>
+              <strong>Guard</strong>
+              <p>Keep real-money trading manual with no auto-buying or auto-selling.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article>
+            <h3>Market Data</h3>
+            <p>Yahoo Finance chart APIs, optional yfinance integration, and quote refresh endpoints.</p>
+          </article>
+          <article>
+            <h3>Alerts</h3>
+            <p>Daily-low checks, WhatsApp share links, and optional Cloud API message hooks.</p>
+          </article>
+          <article>
+            <h3>Deployment</h3>
+            <p>Local server mode plus Cloud Run, Firestore, Docker, and scheduler-ready APIs.</p>
           </article>
         </div>
       </section>

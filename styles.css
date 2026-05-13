@@ -911,6 +911,11 @@ h3 {
     linear-gradient(180deg, rgba(21, 31, 51, 0.66), rgba(11, 16, 32, 0.98));
 }
 
+.stock-piler-section {
+  background:
+    linear-gradient(180deg, rgba(15, 35, 30, 0.72), rgba(11, 16, 32, 0.98));
+}
+
 .project-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
