@@ -1,0 +1,114 @@
+[
+  {
+    "id": "zoro",
+    "sectionClass": "zoro-section",
+    "eyebrow": "Featured Project",
+    "title": "Agent Zoro",
+    "summary": "Autonomous AI job application agent for software, data, and AI job search workflows.",
+    "description": "Agent Zoro discovers jobs, scores resume fit, queues suitable roles, fills ATS applications, uploads resumes, answers screening questions, submits safely with guardrails, and tracks confirmations through reports and Gmail labels.",
+    "actions": [
+      {
+        "label": "Open GitHub",
+        "href": "https://github.com/dpalasala/zoro-agent",
+        "style": "primary",
+        "external": true
+      }
+    ],
+    "resumeBullet": "Built Agent Zoro, an autonomous AI job application agent using Python and Playwright to discover, score, queue, fill, and submit job applications across ATS platforms with scheduling, guardrails, reporting, and Gmail-based tracking.",
+    "workflow": [
+      {
+        "number": "01",
+        "title": "Discover",
+        "text": "Find fresh roles from supported ATS platforms."
+      },
+      {
+        "number": "02",
+        "title": "Match",
+        "text": "Score jobs against resume and preferences."
+      },
+      {
+        "number": "03",
+        "title": "Apply",
+        "text": "Fill forms, upload resumes, answer questions."
+      },
+      {
+        "number": "04",
+        "title": "Track",
+        "text": "Save reports and label confirmation emails."
+      }
+    ],
+    "features": [
+      {
+        "title": "Supported Platforms",
+        "text": "Greenhouse, Stripe, Dice, Ashby, and Lever."
+      },
+      {
+        "title": "Guardrails",
+        "text": "One company, one application. Fresh jobs only. Avoid unsupported roles and risky forms."
+      },
+      {
+        "title": "Automation",
+        "text": "Scheduled application windows, resume routing, reports, and Gmail tracking labels."
+      }
+    ]
+  },
+  {
+    "id": "stock-piler",
+    "sectionClass": "stock-piler-section",
+    "eyebrow": "Featured Project",
+    "title": "Stock Piler",
+    "summary": "Stock and ETF tracking dashboard with market data, alerting, and conservative investing guardrails.",
+    "description": "Stock Piler tracks a global stock and ETF watchlist, detects ticker symbols from company names, refreshes market prices with Yahoo Finance and yfinance, monitors daily lows, and prepares WhatsApp-ready buy alerts while keeping all Robinhood trades manual.",
+    "actions": [
+      {
+        "label": "Open Dashboard",
+        "href": "stock-piler.html",
+        "style": "primary",
+        "external": false
+      },
+      {
+        "label": "Open GitHub",
+        "href": "https://github.com/dpalasala/dpalasala.github.io",
+        "style": "secondary",
+        "external": true
+      }
+    ],
+    "resumeBullet": "Built Stock Piler, a Python and JavaScript stock tracking dashboard with Yahoo Finance/yfinance market data, ticker detection, persistent watchlists, daily-low buy alerts, WhatsApp-ready messages, and Robinhood safety guardrails.",
+    "workflow": [
+      {
+        "number": "01",
+        "title": "Track",
+        "text": "Manage global stocks, ETFs, ADRs, and user-added symbols."
+      },
+      {
+        "number": "02",
+        "title": "Resolve",
+        "text": "Find ticker symbols from company names like Netflix, Tata, or Foxconn."
+      },
+      {
+        "number": "03",
+        "title": "Alert",
+        "text": "Detect daily-low trigger levels and prepare WhatsApp buy alerts."
+      },
+      {
+        "number": "04",
+        "title": "Guard",
+        "text": "Keep real-money trading manual with no auto-buying or auto-selling."
+      }
+    ],
+    "features": [
+      {
+        "title": "Market Data",
+        "text": "Yahoo Finance chart APIs, optional yfinance integration, and quote refresh endpoints."
+      },
+      {
+        "title": "Alerts",
+        "text": "Daily-low checks, WhatsApp share links, and optional Cloud API message hooks."
+      },
+      {
+        "title": "Deployment",
+        "text": "Local server mode plus Cloud Run, Firestore, Docker, and scheduler-ready APIs."
+      }
+    ]
+  }
+]
