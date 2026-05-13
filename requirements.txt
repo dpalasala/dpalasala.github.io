@@ -1,0 +1,2 @@
+yfinance>=0.2.50
+google-cloud-firestore>=2.19.0

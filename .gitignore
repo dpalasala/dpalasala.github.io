@@ -1,0 +1,6 @@
+app/
+*.log
+.env
+.venv/
+__pycache__/
+stock_piler_data.json
